@@ -5,7 +5,7 @@ repository of c codes
 ![Image of Yaktocat](https://octodex.github.com/images/yaktocat.png)
 
 ```
-while(1)
+for(;;)
 {
     code();
 }
