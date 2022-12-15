@@ -18,10 +18,32 @@ int barAA(int a)
     return a;
 }
 
+typedef void(*functionPointer0)(void);
+typedef void(*functionPointer1)(int);
+typedef int(*functionPointer2)(int);
+
 
 
 int main()
 {
+    functionPointer0 func0 = bar;
+    printf("\nThe address of bar = %d", &bar);
+    printf("\nThe address of func1 = %d", func0);
+    printf("\n\n");
+
+    functionPointer1 func1 = barA;
+    printf("\nThe address of barA = %d", &barA);
+    printf("\nThe address of func1 = %d", func1);
+    printf("\n\n");
+
+    functionPointer2 func2 = barAA;
+    printf("\nThe address of barAA = %d", &barAA);
+    printf("\nThe address of func1 = %d", func2);
+    printf("\n\n");
+
+
+
+
     int var = 1;
 
     int* ptr;
