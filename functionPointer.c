@@ -39,7 +39,7 @@ int main()
     *ptr = 48;
     printf("\n\nIndirect access, var = %d\n\n", *ptr);
 
-    //FUNCTION POÝNTER
+    //FUNCTION POINTER
     void (*f)(void); //f is function pointer variable to hold address of a function 
                       //that doesnt take any input argument (void), 
                       //and doesnt retrun any value void
@@ -58,7 +58,7 @@ int main()
 
 
 
-    //FUNCTION POÝNTER WITH VARIABLE
+    //FUNCTION POINTER WITH VARIABLE
     void (*ff)(int);
 
     ff = &barA;
@@ -75,7 +75,7 @@ int main()
 
 
 
-    //FUNCTION POÝNTER WITH VARIABLE WITH  RETURN PARAMETER
+    //FUNCTION POINTER WITH VARIABLE WITH  RETURN PARAMETER
     int (*fff)(int);
 
     fff = &barAA;
@@ -86,8 +86,10 @@ int main()
 
     (*fff)(5);
     printf("\n");
+    fff(5);
+    printf("\n\n");
 
-    int returnValue = fff(5);
+    int returnValue = (*fff)(5);
     printf("\n");
     printf("The Retrun Value: %d", returnValue);
 
